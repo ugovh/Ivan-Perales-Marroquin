@@ -1,10 +1,4 @@
-/* Declaramos las etiquetas personalizadas en español como bloques para que el navegador las entienda correctamente */
-cabeza, cuerpo, sección, botón, pag, pequeño, aporte {
-    display: block;
-}
-
-/* Estilos de la página basados en el diseño limpio de Ismael */
-body, cuerpo {
+body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: #ffffff;
     color: #333333;
@@ -28,17 +22,18 @@ h3 {
     font-weight: 600;
 }
 
-pag {
+p {
     margin-bottom: 15px;
 }
 
-pequeño {
+small {
     font-size: 0.85rem;
     color: #777777;
     margin-top: 5px;
+    display: block;
 }
 
-/* 1. Estilos del Botón interactivo */
+/* 1. Estilos del Botón interactivo estándar */
 .btn-interactivo {
     display: inline-block;
     background-color: #0070f3;
@@ -50,7 +45,6 @@ pequeño {
     cursor: pointer;
     transition: background-color 0.2s, transform 0.1s;
     outline: none;
-    text-align: center;
 }
 
 .btn-interactivo:hover {
@@ -65,7 +59,7 @@ pequeño {
     box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.4);
 }
 
-/* 2. Estilos del Campo de texto */
+/* 2. Estilos del Campo de texto estándar */
 .entrada-interactiva {
     width: 100%;
     padding: 12px;
@@ -75,6 +69,7 @@ pequeño {
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
     background: transparent;
+    display: block;
 }
 
 .entrada-interactiva:focus {
