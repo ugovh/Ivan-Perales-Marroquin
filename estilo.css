@@ -1,0 +1,100 @@
+/* Declaramos las etiquetas personalizadas en español como bloques para que el navegador las entienda correctamente */
+cabeza, cuerpo, sección, botón, pag, pequeño, aporte {
+    display: block;
+}
+
+/* Estilos de la página basados en el diseño limpio de Ismael */
+body, cuerpo {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #111111;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #111111;
+    font-weight: 600;
+}
+
+pag {
+    margin-bottom: 15px;
+}
+
+pequeño {
+    font-size: 0.85rem;
+    color: #777777;
+    margin-top: 5px;
+}
+
+/* 1. Estilos del Botón interactivo */
+.btn-interactivo {
+    display: inline-block;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    outline: none;
+    text-align: center;
+}
+
+.btn-interactivo:hover {
+    background-color: #0051a8;
+}
+
+.btn-interactivo:active {
+    transform: scale(0.98);
+}
+
+.btn-interactivo:focus {
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.4);
+}
+
+/* 2. Estilos del Campo de texto */
+.entrada-interactiva {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: transparent;
+}
+
+.entrada-interactiva:focus {
+    border-color: #0070f3;
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.2);
+}
+
+/* 3. Estilos de los Enlaces */
+.enlace-interactivo {
+    color: #0070f3;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.enlace-interactivo:hover {
+    text-decoration: underline;
+}
+
+.enlace-interactivo:visited {
+    color: #551a8b;
+}
