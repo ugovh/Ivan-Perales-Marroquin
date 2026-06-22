@@ -4,7 +4,294 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ivan Alipio Perales Marroquin - Ciencia de la Computación | UCSP</title>
-    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* Paleta de colores Premium Oscuro (Sutil y Tecnológico) */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Menú de Navegación */
+        header {
+            background-color: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 15px 0;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        /* Contenedor Principal */
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+            color: var(--text-main);
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+
+        /* Cabecera de presentación */
+        .presentacion-cabecera {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .foto-perfil {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+        }
+
+        /* Enlaces */
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #c084fc; /* Estado visitado en morado elegante */
+        }
+
+        /* Plana Docente - Tarjetas */
+        .lista-profesores {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .tarjeta-profesor {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.4);
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .tarjeta-profesor h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.1rem;
+        }
+
+        .tarjeta-profesor p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .linkedin-profe {
+            background-color: #0077b5;
+            color: white !important;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .linkedin-profe:hover {
+            background-color: #005582;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
+        /* Elementos Interactivos Requeridos */
+        .btn-interactivo {
+            background-color: var(--accent);
+            color: #0f172a;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-interactivo:hover {
+            background-color: var(--accent-hover); /* Hover */
+            transform: translateY(-2px);
+        }
+
+        .btn-interactivo:active {
+            transform: translateY(0); /* Active */
+        }
+
+        .btn-interactivo:focus {
+            outline: 3px solid var(--text-main); /* Focus */
+            outline-offset: 2px;
+        }
+
+        .entrada-interactiva {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .entrada-interactiva:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+        }
+
+        small {
+            color: var(--accent);
+            display: block;
+            margin-top: 6px;
+            font-size: 0.8rem;
+        }
+
+        /* Contacto y Proyectos */
+        .redes, .contenedor-enlace-github {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .boton-contacto, .boton-github {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-main) !important;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .boton-contacto:hover, .boton-github:hover {
+            background-color: var(--accent);
+            color: #0f172a !important;
+            text-decoration: none;
+            border-color: var(--accent);
+        }
+
+        /* Relaciones Web - Tarjetas de Compañeros */
+        .contenedor-cards-compañeros {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .contenedor-cards-compañeros {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card-compañero {
+            display: flex;
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            color: var(--text-main) !important;
+            transition: all 0.2s;
+        }
+
+        .card-compañero:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.1);
+            text-decoration: none;
+        }
+
+        .barra-lateral {
+            width: 6px;
+            background-color: var(--accent);
+        }
+
+        .card-compañero span {
+            padding: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,28 +309,31 @@
     </header>
 
     <main>
-        <!-- Sección Presentación Cabecera -->
+        <!-- Presentación Cabecera -->
         <section id="presentacion">
             <div class="presentacion-cabecera">
-                <h1>Ivan Alipio Perales Marroquin</h1>
-                <!-- REEMPLAZA "tu-foto.jpg" CON EL NOMBRE REAL DE TU IMAGEN CUANDO LA SUBAS -->
-                <img src="tu-foto.jpg" alt="Foto de Ivan Alipio" class="foto-perfil">
+                <div>
+                    <h1 style="margin-bottom: 5px;">Ivan Alipio Perales Marroquin</h1>
+                    <p style="margin: 0; color: var(--accent);">Estudiante de Ciencia de la Computación - UCSP</p>
+                </div>
+                <!-- ESPACIO PARA TU FOTO (Sube tu foto con el nombre "yo.jpg" o cambia la ruta) -->
+                <img src="yo.jpg" alt="Foto de perfil de Ivan Alipio" class="foto-perfil">
             </div>
         </section>
 
-        <!-- Sección Detalle Sobre Mí -->
+        <!-- Detalle Sobre Mí -->
         <section id="sobre-mi">
             <h2>Sobre mí</h2>
             <p>Soy un estudiante apasionado de la tecnología enfocado en la Ciencia de la Computación. Mi objetivo es construir software eficiente y escalable, combinando la rigurosidad de los algoritmos en C++ con la versatilidad del desarrollo web moderno.</p>
 
             <div class="cv-detalles">
-                <h3>Formación Académica</h3>
-                <ul>
+                <h3 style="margin-top: 20px;">Formación Académica</h3>
+                <ul style="color: var(--text-muted);">
                     <li><strong>Pregrado:</strong> Carrera - Ciencia de la Computación en la <a href="https://ucsp.edu.pe/" target="_blank">Universidad Católica San Pablo</a>.</li>
                 </ul>
 
                 <h3>Áreas de Interés</h3>
-                <ul>
+                <ul style="color: var(--text-muted);">
                     <li>Desarrollo de Software (C++, Python)</li>
                     <li>Arquitectura de Sistemas y Algoritmos</li>
                     <li>Desarrollo Front-end (HTML, CSS, JavaScript)</li>
@@ -51,7 +341,7 @@
             </div>
         </section>
 
-        <!-- Sección Plana Docente -->
+        <!-- Plana Docente -->
         <section id="profesores">
             <h2>Plana Docente</h2>
             <p>Cursos de segundo semestre</p>
@@ -99,37 +389,37 @@
             </div>
         </section>
 
-        <!-- Sección de Interactividad Obligatoria para tu Curso -->
+        <!-- Estados Interactivos Obligatorios para la nota -->
         <section id="interactividad">
             <h2>Elementos Interactivos</h2>
-            <p>Evaluación de múltiples estados requeridos:</p>
+            <p>Sección destinada a la evaluación de múltiples estados:</p>
             
-            <div class="interactivo-bloque">
-                <h3>1. Botón con múltiples estados</h3>
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-size: 1.1rem;">1. Botón con múltiples estados</h3>
                 <button class="btn-interactivo">Interactúa conmigo</button>
-                <p><small>(Estados: Pasar el cursor, Activo, Enfocar)</small></p>
+                <small>(Estados configurados: Hover, Active, Focus)</small>
             </div>
 
-            <div class="interactivo-bloque" style="margin-top: 20px;">
-                <h3>2. Campo de texto</h3>
+            <div>
+                <h3 style="font-size: 1.1rem;">2. Campo de texto</h3>
                 <input type="text" class="entrada-interactiva" placeholder="Haz clic para escribir...">
-                <p><small>(Estados: Enfoque, Marcador de posición mostrado)</small></p>
+                <small>(Estados configurados: Focus, Placeholder activo)</small>
             </div>
         </section>
 
-        <!-- Sección Contacto -->
+        <!-- Contacto (Listo para tus enlaces) -->
         <section id="contacto">
             <h2>Contacto</h2>
             <p>Si quieres hablar conmigo o mandar un saludo, puedes encontrarme en:</p>
             <div class="redes">
-                <!-- REEMPLAZA EL ENLACE CON TU CORREO -->
+                <!-- REEMPLAZA EL ENLACE CON TU CORREO ELECTRÓNICO REAL -->
                 <a href="mailto:tu.correo@ucsp.edu.pe" class="boton-contacto">Enviar Email</a>
                 <!-- PEGA AQUÍ TU ENLACE REAL DE LINKEDIN REEMPLAZANDO EL '#' -->
-                <a href="#" target="_blank" class="boton-contacto">LinkedIn</a>
+                <a href="#" target="_blank" class="boton-contacto">Mi LinkedIn</a>
             </div>
         </section>
 
-        <!-- Sección Proyectos -->
+        <!-- Proyectos (Listo para tu enlace) -->
         <section id="proyectos">
             <h2>Proyectos</h2>
             <p>Puedes ver todo mi código, repositorios y ejercicios técnicos en mi perfil oficial:</p>
@@ -139,7 +429,7 @@
             </div>
         </section>
 
-        <!-- Sección Relaciones Web (PageRank) -->
+        <!-- Relaciones Web (PageRank completo de tus compañeros) -->
         <section id="relaciones-web">
             <h2>Relaciones Web</h2>
             <p>Estos son los sitios web de mis compañeros de clase. ¡Te invito a explorarlos!</p>
@@ -184,7 +474,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 - Creado por Ivan Alipio Perales Marroquin</p>
+        <p>&copy; 2026 - Diseñado por Ivan Alipio Perales Marroquin</p>
     </footer>
 
 </body>
