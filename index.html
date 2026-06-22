@@ -3,42 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan Alipio Perales Marroquin - Ciencia de la Computación</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>Ivan Alipio Perales Marroquin - Ciencia de la Computación | UCSP</title>
+    <style>
+        /* Paleta de colores y estilos globales */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        main {
+            max-width: 650px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Encabezado e Imagen */
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .perfil-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 15px;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.2);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 8px 0;
+            color: var(--text-main);
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 400;
+            margin: 0;
+        }
+
+        /* Secciones y Contenedores */
+        section {
+            background: rgba(15, 23, 42, 0.4);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        h3 {
+            margin-top: 0;
+            color: var(--text-main);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin: 0 0 10px 0;
+        }
+
+        small {
+            color: var(--accent);
+            opacity: 0.8;
+            font-size: 0.8rem;
+            display: block;
+            margin-top: 8px;
+        }
+
+        /* Elementos Interactivos Requeridos */
+        .btn-interactivo {
+            background-color: var(--accent);
+            color: #0f172a;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-interactivo:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+
+        .btn-interactivo:active {
+            transform: translateY(0);
+        }
+
+        .btn-interactivo:focus {
+            outline: 2px solid var(--text-main);
+            outline-offset: 2px;
+        }
+
+        .entrada-interactiva {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: var(--bg-color);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .entrada-interactiva:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        }
+
+        /* Enlaces de Redes y Compañeros */
+        .enlace-interactivo {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s ease, border-bottom 0.2s ease;
+            border-bottom: 1px dashed transparent;
+        }
+
+        .enlace-interactivo:hover {
+            color: var(--text-main);
+            border-bottom-color: var(--text-main);
+        }
+
+        .enlace-interactivo:visited {
+            color: #c084fc; /* Tono morado elegante para indicar estado visitado */
+        }
+
+        /* Redes Profesionales */
+        .redes-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .btn-red {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-red:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .lista-companeros {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 12px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Ivan Alipio Perales Marroquin</h1>
-    <h2 style="color: #666; font-weight: 400; margin-top: -15px; margin-bottom: 30px;">Estudiante de Ciencia de la Computación - UCSP</h2>
+    <main>
+        <header>
+            <!-- REEMPLAZA "RUTA_DE_TU_IMAGEN.jpg" CON LA RUTA REAL DE TU FOTO CUANDO LA SUBAS -->
+            <img src="RUTA_DE_TU_IMAGEN.jpg" alt="Ivan Alipio Perales Marroquin" class="perfil-img">
+            <h1>Ivan Alipio Perales Marroquin</h1>
+            <h2>Estudiante de Ciencia de la Computación - UCSP</h2>
+        </header>
 
-    <section>
-        <h3>Sobre mí</h3>
-        <p>Soy estudiante de segundo semestre en la <a href="https://ucsp.edu.pe/" target="_blank" class="enlace-interactivo">Universidad Católica San Pablo</a>. Apasionado por el desarrollo de software, la lógica algorítmica y la programación en C++ y Python.</p>
-    </section>
-
-    <section>
-        <h3>1. Botón con múltiples estados</h3>
-        <button class="btn-interactivo">Interactúa conmigo</button>
-        <p><small>(Pasar el cursor, Activo, Enfocar)</small></p>
-    </section>
-
-    <section>
-        <h3>2. Campo de texto</h3>
-        <input type="text" class="entrada-interactiva" placeholder="Haz clic para escribir...">
-        <p><small>(Enfoque, marcador de posición mostrado)</small></p>
-    </section>
-
-    <section>
-        <h3>3. Enlace visitado (Red de Compañeros)</h3>
-        <p>Para lograr el objetivo de SEO y PageRank del curso, aquí enlazo a mis compañeros:</p>
-        
-        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px; margin-bottom: 10px;">
-            <a href="https://cdnglm.github.io/" target="_blank" class="enlace-interactivo">Ismael Jacob Díaz Huillca</a>
-            <a href="https://09mva.github.io/Proyectos/" target="_blank" class="enlace-interactivo">Milton Pavel Vilca Asqui</a>
+        <section>
+            <h3>Sobre mí</h3>
+            <p>Soy estudiante de segundo semestre en la <a href="https://ucsp.edu.pe/" target="_blank" class="enlace-interactivo">Universidad Católica San Pablo</a>. Apasionado por el desarrollo de software, la lógica algorítmica y la programación en C++ y Python.</p>
+            
+            <!-- CONTENEDOR PARA TUS REDES PROFESIONALES -->
+            <div class="redes-container">
+                <!-- REEMPLAZA EL # CON TU LINK DE LINKEDIN -->
+                <a href="#" target="_blank" class="btn-red">🔗 Mi LinkedIn</a>
+                <!-- REEMPLAZA EL # CON TU LINK DE GITHUB PRINCIPAL SI TIENES UNO -->
+                <a href="#" target="_blank" class="btn-red">💻 Mi GitHub</a>
             </div>
-        
-        <p><small>(Enlace, Visitado)</small></p>
-    </section>
+        </section>
+
+        <section>
+            <h3>1. Botón con múltiples estados</h3>
+            <button class="btn-interactivo">Interactúa conmigo</button>
+            <small>(Estados evaluados: Hover, Active, Focus)</small>
+        </section>
+
+        <section>
+            <h3>2. Campo de texto</h3>
+            <input type="text" class="entrada-interactiva" placeholder="Haz clic para escribir...">
+            <small>(Estados evaluados: Focus, Placeholder mostrado)</small>
+        </section>
+
+        <section>
+            <h3>3. Enlace visitado (Red de Compañeros)</h3>
+            <p>Para lograr el objetivo de SEO y PageRank del curso, aquí enlazo a mi red de compañeros:</p>
+            
+            <div class="lista-companeros">
+                <a href="https://cdnglm.github.io/" target="_blank" class="enlace-interactivo">Ismael Jacob Díaz Huillca</a>
+                <a href="https://09mva.github.io/Proyectos/" target="_blank" class="enlace-interactivo">Milton Pavel Vilca Asqui</a>
+                <!-- SI DESEAS AGREGAR A ALGUIEN MÁS EN EL FUTURO, COPIA LA LÍNEA DE ABAJO -->
+                <!-- <a href="LINK_AQUÍ" target="_blank" class="enlace-interactivo">Nombre Compañero</a> -->
+            </div>
+            
+            <small>(Estados evaluados: Link, Hover, Visited)</small>
+        </section>
+    </main>
 
 </body>
 </html>
