@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ivan Alipio Perales Marroquin - Ciencia de la Computación | UCSP</title>
     <style>
-        /* Paleta de colores Premium Oscuro (Sutil y Tecnológico) */
+        /* Paleta Minimalista y Orgánica (Sutil) */
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
+            --bg-color: #1e2530; /* Gris pizarra natural, menos saturado */
+            --card-bg: #283141; /* Contraste suave para las secciones */
+            --text-main: #f1f5f9;
             --text-muted: #94a3b8;
             --accent: #38bdf8;
-            --accent-hover: #0ea5e9;
-            --border-color: rgba(255, 255, 255, 0.08);
+            --accent-hover: #7dd3fc;
+            --border-color: rgba(255, 255, 255, 0.06);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
@@ -27,8 +27,7 @@
 
         /* Menú de Navegación */
         header {
-            background-color: rgba(30, 41, 59, 0.8);
-            backdrop-filter: blur(8px);
+            background-color: rgba(40, 49, 65, 0.9);
             border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
@@ -41,14 +40,14 @@
             justify-content: center;
             margin: 0;
             padding: 15px 0;
-            gap: 20px;
+            gap: 25px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: var(--text-muted);
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: 500;
+            font-size: 0.9rem;
             transition: color 0.2s ease;
         }
 
@@ -58,33 +57,34 @@
 
         /* Contenedor Principal */
         main {
-            max-width: 800px;
+            max-width: 760px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
         section {
             background: var(--card-bg);
-            padding: 35px;
-            margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
             border: 1px solid var(--border-color);
         }
 
         h1, h2, h3 {
             margin-top: 0;
             color: var(--text-main);
+            font-weight: 600;
         }
 
         h2 {
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 8px;
-            font-size: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            font-size: 1.35rem;
         }
 
         p {
             color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
         /* Cabecera de presentación */
@@ -97,156 +97,108 @@
         }
 
         .foto-perfil {
-            width: 130px;
-            height: 130px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--accent);
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+            border: 2px solid var(--border-color);
         }
 
         /* Enlaces */
         a {
             color: var(--accent);
             text-decoration: none;
-            transition: all 0.2s;
+            transition: color 0.2s;
         }
 
         a:hover {
-            color: var(--text-main);
-            text-decoration: underline;
+            color: var(--accent-hover);
         }
 
         a:visited {
-            color: #c084fc; /* Estado visitado en morado elegante */
+            color: #c084fc;
         }
 
         /* Plana Docente - Tarjetas */
         .lista-profesores {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .tarjeta-profesor {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(15, 23, 42, 0.4);
-            padding: 15px 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent);
-            border-top: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.15);
+            padding: 14px 20px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
         }
 
         .tarjeta-profesor h3 {
-            margin: 0 0 5px 0;
-            font-size: 1.1rem;
+            margin: 0 0 4px 0;
+            font-size: 1rem;
         }
 
         .tarjeta-profesor p {
             margin: 0;
-            font-size: 0.95rem;
-        }
-
-        .linkedin-profe {
-            background-color: #0077b5;
-            color: white !important;
-            padding: 8px 14px;
-            border-radius: 6px;
             font-size: 0.85rem;
-            font-weight: bold;
         }
 
-        .linkedin-profe:hover {
-            background-color: #005582;
-            text-decoration: none;
-            transform: translateY(-1px);
-        }
-
-        /* Elementos Interactivos Requeridos */
-        .btn-interactivo {
-            background-color: var(--accent);
-            color: #0f172a;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.95rem;
-            transition: all 0.2s ease;
-        }
-
-        .btn-interactivo:hover {
-            background-color: var(--accent-hover); /* Hover */
-            transform: translateY(-2px);
-        }
-
-        .btn-interactivo:active {
-            transform: translateY(0); /* Active */
-        }
-
-        .btn-interactivo:focus {
-            outline: 3px solid var(--text-main); /* Focus */
-            outline-offset: 2px;
-        }
-
-        .entrada-interactiva {
-            width: 100%;
-            max-width: 400px;
-            padding: 12px;
-            background-color: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--text-main);
-            font-size: 0.95rem;
-            transition: all 0.2s;
-        }
-
-        .entrada-interactiva:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
-        }
-
-        small {
-            color: var(--accent);
-            display: block;
-            margin-top: 6px;
+        /* Estilización unificada para los botones de las tarjetas */
+        .btn-tarjeta {
+            color: white !important;
+            padding: 6px 12px;
+            border-radius: 4px;
             font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none !important;
         }
 
-        /* Contacto y Proyectos */
+        .btn-linkedin {
+            background-color: #0077b5;
+        }
+
+        .btn-linkedin:hover {
+            background-color: #005a8a;
+        }
+
+        .btn-email-profe {
+            background-color: #475569;
+        }
+
+        .btn-email-profe:hover {
+            background-color: #334155;
+        }
+
+        /* Bloques de Botones inferiores */
         .redes, .contenedor-enlace-github {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             margin-top: 15px;
         }
 
-        .boton-contacto, .boton-github {
+        .boton-accion {
             background-color: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border-color);
             color: var(--text-main) !important;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: all 0.2s;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
-        .boton-contacto:hover, .boton-github:hover {
-            background-color: var(--accent);
-            color: #0f172a !important;
-            text-decoration: none;
-            border-color: var(--accent);
+        .boton-accion:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: var(--text-muted);
         }
 
-        /* Relaciones Web - Tarjetas de Compañeros */
+        /* Lista de Compañeros */
         .contenedor-cards-compañeros {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 10px;
             margin-top: 15px;
         }
 
@@ -258,30 +210,26 @@
 
         .card-compañero {
             display: flex;
-            background: rgba(15, 23, 42, 0.4);
+            background: rgba(0, 0, 0, 0.15);
             border: 1px solid var(--border-color);
-            border-radius: 6px;
+            border-radius: 5px;
             overflow: hidden;
             color: var(--text-main) !important;
-            transition: all 0.2s;
+            transition: border-color 0.2s;
         }
 
         .card-compañero:hover {
-            transform: translateY(-2px);
             border-color: var(--accent);
-            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.1);
-            text-decoration: none;
         }
 
         .barra-lateral {
-            width: 6px;
+            width: 4px;
             background-color: var(--accent);
         }
 
         .card-compañero span {
-            padding: 15px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            padding: 12px;
+            font-size: 0.85rem;
         }
 
         /* Footer */
@@ -289,7 +237,7 @@
             text-align: center;
             padding: 30px;
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -300,7 +248,6 @@
             <ul>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#profesores">Cursos y Profesores</a></li>
-                <li><a href="#interactividad">Interactividad</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#relaciones-web">Relaciones Web</a></li> 
@@ -313,10 +260,9 @@
         <section id="presentacion">
             <div class="presentacion-cabecera">
                 <div>
-                    <h1 style="margin-bottom: 5px;">Ivan Alipio Perales Marroquin</h1>
-                    <p style="margin: 0; color: var(--accent);">Estudiante de Ciencia de la Computación - UCSP</p>
+                    <h1 style="margin-bottom: 5px; font-size: 1.6rem;">Ivan Alipio Perales Marroquin</h1>
+                    <p style="margin: 0; color: var(--accent); font-size: 0.9rem;">Estudiante de Ciencia de la Computación</p>
                 </div>
-                <!-- ESPACIO PARA TU FOTO (Sube tu foto con el nombre "yo.jpg" o cambia la ruta) -->
                 <img src="yo.jpg" alt="Foto de perfil de Ivan Alipio" class="foto-perfil">
             </div>
         </section>
@@ -327,13 +273,13 @@
             <p>Soy un estudiante apasionado de la tecnología enfocado en la Ciencia de la Computación. Mi objetivo es construir software eficiente y escalable, combinando la rigurosidad de los algoritmos en C++ con la versatilidad del desarrollo web moderno.</p>
 
             <div class="cv-detalles">
-                <h3 style="margin-top: 20px;">Formación Académica</h3>
-                <ul style="color: var(--text-muted);">
+                <h3 style="margin-top: 20px; font-size: 1.1rem;">Formación Académica</h3>
+                <ul style="color: var(--text-muted); font-size: 0.9rem; padding-left: 20px;">
                     <li><strong>Pregrado:</strong> Carrera - Ciencia de la Computación en la <a href="https://ucsp.edu.pe/" target="_blank">Universidad Católica San Pablo</a>.</li>
                 </ul>
 
-                <h3>Áreas de Interés</h3>
-                <ul style="color: var(--text-muted);">
+                <h3 style="font-size: 1.1rem;">Áreas de Interés</h3>
+                <ul style="color: var(--text-muted); font-size: 0.9rem; padding-left: 20px;">
                     <li>Desarrollo de Software (C++, Python)</li>
                     <li>Arquitectura de Sistemas y Algoritmos</li>
                     <li>Desarrollo Front-end (HTML, CSS, JavaScript)</li>
@@ -352,15 +298,15 @@
                         <h3>Dr. Ernesto Cuadros Vargas</h3>
                         <p>Curso: Introducción a la Computación</p>
                     </div>
-                    <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="btn-tarjeta btn-linkedin">LinkedIn</a>
                 </article>
 
                 <article class="tarjeta-profesor">
                     <div class="info-profe">
                         <h3>Dr. Renzo Moreno Cavero</h3>
-                        <p>Curso: Historia occidental</p>
+                        <p>Curso: Historia Occidental</p>
                     </div>
-                    <a href="rmoreno@ucsp.edu.pe">gmail</a>
+                    <a href="mailto:rmoreno@ucsp.edu.pe" class="btn-tarjeta btn-email-profe">Email</a>
                 </article>
                 
                 <article class="tarjeta-profesor">
@@ -368,7 +314,7 @@
                         <h3>Dr. Erick Mauricio Gomez Nieto</h3>
                         <p>Curso: Programación Orientada a Objetos</p>
                     </div>
-                    <a href="https://www.linkedin.com/in/erick-gomez-nieto-24210130/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/erick-gomez-nieto-24210130/" target="_blank" class="btn-tarjeta btn-linkedin">LinkedIn</a>
                 </article>
                 
                 <article class="tarjeta-profesor">
@@ -376,60 +322,39 @@
                         <h3>Mg. Kristel Gisselle Loayza Cruz</h3>
                         <p>Curso: Lógica</p>
                     </div>
-                    <a href="https://www.linkedin.com/in/kristel-gisselle-loayza-cruz-abb3b039b/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/kristel-gisselle-loayza-cruz-abb3b039b/" target="_blank" class="btn-tarjeta btn-linkedin">LinkedIn</a>
                 </article>
 
                 <article class="tarjeta-profesor">
                     <div class="info-profe">
-                        <h3>Dra. Rendon Garcia Fiorela Luz </h3>
-                        <p>Curso: Fundamentos matem[aticos para computación</p>
+                        <h3>Dra. Rendon Garcia Fiorela Luz</h3>
+                        <p>Curso: Fundamentos Matemáticos para Computación</p>
                     </div>
-                    <a href="https://www.linkedin.com/in/fiorella-luz-romero-g%C3%B3mez-1a6702138/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/fiorella-luz-romero-g%C3%B3mez-1a6702138/" target="_blank" class="btn-tarjeta btn-linkedin">LinkedIn</a>
                 </article>
             </div>
         </section>
 
-        <!-- Estados Interactivos Obligatorios para la nota -->
-        <section id="interactividad">
-            <h2>Elementos Interactivos</h2>
-            <p>Sección destinada a la evaluación de múltiples estados:</p>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 1.1rem;">1. Botón con múltiples estados</h3>
-                <button class="btn-interactivo">Interactúa conmigo</button>
-                <small>(Estados configurados: Hover, Active, Focus)</small>
-            </div>
-
-            <div>
-                <h3 style="font-size: 1.1rem;">2. Campo de texto</h3>
-                <input type="text" class="entrada-interactiva" placeholder="Haz clic para escribir...">
-                <small>(Estados configurados: Focus, Placeholder activo)</small>
-            </div>
-        </section>
-
-        <!-- Contacto (Listo para tus enlaces) -->
+        <!-- Contacto -->
         <section id="contacto">
             <h2>Contacto</h2>
             <p>Si quieres hablar conmigo o mandar un saludo, puedes encontrarme en:</p>
             <div class="redes">
-                <!-- REEMPLAZA EL ENLACE CON TU CORREO ELECTRÓNICO REAL -->
-                <a href="mailto:tu.correo@ucsp.edu.pe" class="boton-contacto">Enviar Email</a>
-                <!-- PEGA AQUÍ TU ENLACE REAL DE LINKEDIN REEMPLAZANDO EL '#' -->
-                <a href="#" target="_blank" class="boton-contacto">Mi LinkedIn</a>
+                <a href="mailto:ivan.perales@ucsp.edu.pe" class="boton-accion">Enviar Email</a>
+                <a href="https://www.linkedin.com/in/ugovh-undefined-b1a62632b/" target="_blank" class="boton-accion">Mi LinkedIn</a>
             </div>
         </section>
 
-        <!-- Proyectos (Listo para tu enlace) -->
+        <!-- Proyectos -->
         <section id="proyectos">
             <h2>Proyectos</h2>
             <p>Puedes ver todo mi código, repositorios y ejercicios técnicos en mi perfil oficial:</p>
             <div class="contenedor-enlace-github">
-                <!-- PEGA AQUÍ TU ENLACE REAL DE GITHUB REEMPLAZANDO EL '#' -->
-                <a href="#" target="_blank" class="boton-github">Visitar mi GitHub</a>
+                <a href="https://github.com/ugovh" target="_blank" class="boton-accion">Visitar mi GitHub</a>
             </div>
         </section>
 
-        <!-- Relaciones Web (PageRank completo de tus compañeros) -->
+        <!-- Relaciones Web -->
         <section id="relaciones-web">
             <h2>Relaciones Web</h2>
             <p>Estos son los sitios web de mis compañeros de clase. ¡Te invito a explorarlos!</p>
