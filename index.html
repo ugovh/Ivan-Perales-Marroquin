@@ -4,247 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ivan Alipio Perales Marroquin - Ciencia de la Computación | UCSP</title>
-    <style>
-        /* Paleta de colores y estilos globales */
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-hover: #0ea5e9;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        main {
-            max-width: 650px;
-            width: 100%;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Encabezado e Imagen */
-        header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .perfil-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent);
-            margin-bottom: 15px;
-            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.2);
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin: 0 0 8px 0;
-            color: var(--text-main);
-        }
-
-        h2 {
-            font-size: 1.1rem;
-            color: var(--accent);
-            font-weight: 400;
-            margin: 0;
-        }
-
-        /* Secciones y Contenedores */
-        section {
-            background: rgba(15, 23, 42, 0.4);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        h3 {
-            margin-top: 0;
-            color: var(--text-main);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 8px;
-            font-size: 1.1rem;
-        }
-
-        p {
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin: 0 0 10px 0;
-        }
-
-        small {
-            color: var(--accent);
-            opacity: 0.8;
-            font-size: 0.8rem;
-            display: block;
-            margin-top: 8px;
-        }
-
-        /* Elementos Interactivos Requeridos */
-        .btn-interactivo {
-            background-color: var(--accent);
-            color: #0f172a;
-            border: none;
-            padding: 10px 20px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .btn-interactivo:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
-        }
-
-        .btn-interactivo:active {
-            transform: translateY(0);
-        }
-
-        .btn-interactivo:focus {
-            outline: 2px solid var(--text-main);
-            outline-offset: 2px;
-        }
-
-        .entrada-interactiva {
-            width: 100%;
-            box-sizing: border-box;
-            background-color: var(--bg-color);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 12px;
-            border-radius: 8px;
-            color: var(--text-main);
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
-
-        .entrada-interactiva:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
-        }
-
-        /* Enlaces de Redes y Compañeros */
-        .enlace-interactivo {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color 0.2s ease, border-bottom 0.2s ease;
-            border-bottom: 1px dashed transparent;
-        }
-
-        .enlace-interactivo:hover {
-            color: var(--text-main);
-            border-bottom-color: var(--text-main);
-        }
-
-        .enlace-interactivo:visited {
-            color: #c084fc; /* Tono morado elegante para indicar estado visitado */
-        }
-
-        /* Redes Profesionales */
-        .redes-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .btn-red {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-main);
-            padding: 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.2s ease;
-        }
-
-        .btn-red:hover {
-            background: rgba(56, 189, 248, 0.1);
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .lista-companeros {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 12px;
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#profesores">Cursos y Profesores</a></li>
+                <li><a href="#interactividad">Interactividad</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#relaciones-web">Relaciones Web</a></li> 
+            </ul>
+        </nav>
+    </header>
+
     <main>
-        <header>
-            <!-- REEMPLAZA "RUTA_DE_TU_IMAGEN.jpg" CON LA RUTA REAL DE TU FOTO CUANDO LA SUBAS -->
-            <img src="RUTA_DE_TU_IMAGEN.jpg" alt="Ivan Alipio Perales Marroquin" class="perfil-img">
-            <h1>Ivan Alipio Perales Marroquin</h1>
-            <h2>Estudiante de Ciencia de la Computación - UCSP</h2>
-        </header>
-
-        <section>
-            <h3>Sobre mí</h3>
-            <p>Soy estudiante de segundo semestre en la <a href="https://ucsp.edu.pe/" target="_blank" class="enlace-interactivo">Universidad Católica San Pablo</a>. Apasionado por el desarrollo de software, la lógica algorítmica y la programación en C++ y Python.</p>
-            
-            <!-- CONTENEDOR PARA TUS REDES PROFESIONALES -->
-            <div class="redes-container">
-                <!-- REEMPLAZA EL # CON TU LINK DE LINKEDIN -->
-                <a href="#" target="_blank" class="btn-red">🔗 Mi LinkedIn</a>
-                <!-- REEMPLAZA EL # CON TU LINK DE GITHUB PRINCIPAL SI TIENES UNO -->
-                <a href="#" target="_blank" class="btn-red">💻 Mi GitHub</a>
+        <!-- Sección Presentación Cabecera -->
+        <section id="presentacion">
+            <div class="presentacion-cabecera">
+                <h1>Ivan Alipio Perales Marroquin</h1>
+                <!-- REEMPLAZA "tu-foto.jpg" CON EL NOMBRE REAL DE TU IMAGEN CUANDO LA SUBAS -->
+                <img src="tu-foto.jpg" alt="Foto de Ivan Alipio" class="foto-perfil">
             </div>
         </section>
 
-        <section>
-            <h3>1. Botón con múltiples estados</h3>
-            <button class="btn-interactivo">Interactúa conmigo</button>
-            <small>(Estados evaluados: Hover, Active, Focus)</small>
-        </section>
+        <!-- Sección Detalle Sobre Mí -->
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Soy un estudiante apasionado de la tecnología enfocado en la Ciencia de la Computación. Mi objetivo es construir software eficiente y escalable, combinando la rigurosidad de los algoritmos en C++ con la versatilidad del desarrollo web moderno.</p>
 
-        <section>
-            <h3>2. Campo de texto</h3>
-            <input type="text" class="entrada-interactiva" placeholder="Haz clic para escribir...">
-            <small>(Estados evaluados: Focus, Placeholder mostrado)</small>
-        </section>
+            <div class="cv-detalles">
+                <h3>Formación Académica</h3>
+                <ul>
+                    <li><strong>Pregrado:</strong> Carrera - Ciencia de la Computación en la <a href="https://ucsp.edu.pe/" target="_blank">Universidad Católica San Pablo</a>.</li>
+                </ul>
 
-        <section>
-            <h3>3. Enlace visitado (Red de Compañeros)</h3>
-            <p>Para lograr el objetivo de SEO y PageRank del curso, aquí enlazo a mi red de compañeros:</p>
-            
-            <div class="lista-companeros">
-                <a href="https://cdnglm.github.io/" target="_blank" class="enlace-interactivo">Ismael Jacob Díaz Huillca</a>
-                <a href="https://09mva.github.io/Proyectos/" target="_blank" class="enlace-interactivo">Milton Pavel Vilca Asqui</a>
-                <!-- SI DESEAS AGREGAR A ALGUIEN MÁS EN EL FUTURO, COPIA LA LÍNEA DE ABAJO -->
-                <!-- <a href="LINK_AQUÍ" target="_blank" class="enlace-interactivo">Nombre Compañero</a> -->
+                <h3>Áreas de Interés</h3>
+                <ul>
+                    <li>Desarrollo de Software (C++, Python)</li>
+                    <li>Arquitectura de Sistemas y Algoritmos</li>
+                    <li>Desarrollo Front-end (HTML, CSS, JavaScript)</li>
+                </ul>
             </div>
+        </section>
+
+        <!-- Sección Plana Docente -->
+        <section id="profesores">
+            <h2>Plana Docente</h2>
+            <p>Cursos de segundo semestre</p>
+    
+            <div class="lista-profesores">
+                <article class="tarjeta-profesor">
+                    <div class="info-profe">
+                        <h3>Dr. Ernesto Cuadros Vargas</h3>
+                        <p>Curso: Introducción a la Computación</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                </article>
+
+                <article class="tarjeta-profesor">
+                    <div class="info-profe">
+                        <h3>Dr. Dugan Paul Nina Ortiz</h3>
+                        <p>Curso: Cálculo Diferencial e Integral I</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/dugan-paul-nina-ortiz-ab875774/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                </article>
+                
+                <article class="tarjeta-profesor">
+                    <div class="info-profe">
+                        <h3>Dr. Erick Mauricio Gomez Nieto</h3>
+                        <p>Curso: Programación Orientada a Objetos</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/erick-gomez-nieto-24210130/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                </article>
+                
+                <article class="tarjeta-profesor">
+                    <div class="info-profe">
+                        <h3>Mg. Kristel Gisselle Loayza Cruz</h3>
+                        <p>Curso: Lógica</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/kristel-gisselle-loayza-cruz-abb3b039b/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                </article>
+
+                <article class="tarjeta-profesor">
+                    <div class="info-profe">
+                        <h3>Dra. Rosmery Violeta Quispe Zavala</h3>
+                        <p>Curso: Estructuras Discretas II</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/rosmery-violeta-quispe-zavala-58374638/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de Interactividad Obligatoria para tu Curso -->
+        <section id="interactividad">
+            <h2>Elementos Interactivos</h2>
+            <p>Evaluación de múltiples estados requeridos:</p>
             
-            <small>(Estados evaluados: Link, Hover, Visited)</small>
+            <div class="interactivo-bloque">
+                <h3>1. Botón con múltiples estados</h3>
+                <button class="btn-interactivo">Interactúa conmigo</button>
+                <p><small>(Estados: Pasar el cursor, Activo, Enfocar)</small></p>
+            </div>
+
+            <div class="interactivo-bloque" style="margin-top: 20px;">
+                <h3>2. Campo de texto</h3>
+                <input type="text" class="entrada-interactiva" placeholder="Haz clic para escribir...">
+                <p><small>(Estados: Enfoque, Marcador de posición mostrado)</small></p>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Si quieres hablar conmigo o mandar un saludo, puedes encontrarme en:</p>
+            <div class="redes">
+                <!-- REEMPLAZA EL ENLACE CON TU CORREO -->
+                <a href="mailto:tu.correo@ucsp.edu.pe" class="boton-contacto">Enviar Email</a>
+                <!-- PEGA AQUÍ TU ENLACE REAL DE LINKEDIN REEMPLAZANDO EL '#' -->
+                <a href="#" target="_blank" class="boton-contacto">LinkedIn</a>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <p>Puedes ver todo mi código, repositorios y ejercicios técnicos en mi perfil oficial:</p>
+            <div class="contenedor-enlace-github">
+                <!-- PEGA AQUÍ TU ENLACE REAL DE GITHUB REEMPLAZANDO EL '#' -->
+                <a href="#" target="_blank" class="boton-github">Visitar mi GitHub</a>
+            </div>
+        </section>
+
+        <!-- Sección Relaciones Web (PageRank) -->
+        <section id="relaciones-web">
+            <h2>Relaciones Web</h2>
+            <p>Estos son los sitios web de mis compañeros de clase. ¡Te invito a explorarlos!</p>
+            
+            <div class="contenedor-cards-compañeros">
+                <a href="https://09mva.github.io/Proyectos/" target="_blank" class="card-compañero">
+                    <div class="barra-lateral"></div>
+                    <span>Página de Milton Pavel Vilca Asqui</span>
+                </a>
+
+                <a href="https://ayelen11.github.io/flor-ayelen-michcapacchua-huarca/" target="_blank" class="card-compañero">
+                    <div class="barra-lateral"></div>
+                    <span>Página de Flor Ayelen Michcapacchua Huarca</span>
+                </a>
+
+                <a href="https://cdnglm.github.io/" target="_blank" class="card-compañero">
+                    <div class="barra-lateral"></div>
+                    <span>Página de Ismael Jacob Diaz Huillca</span>
+                </a>
+
+                <a href="https://faviom15.github.io/favio-cesar-portfolio/" target="_blank" class="card-compañero">
+                    <div class="barra-lateral"></div>
+                    <span>Página de Favio Cesar Mendigure Perochona</span>
+                </a>
+
+                <a href="https://alvaroqu.github.io/" target="_blank" class="card-compañero">
+                    <div class="barra-lateral"></div>
+                    <span>Página de Alvaro Quispe Fuentes</span>
+                </a>
+
+                <a href="https://angel-hancco.github.io/" target="_blank" class="card-compañero">
+                    <div class="barra-lateral"></div>
+                    <span>Página de Angel Raul Hancco Quispe</span>
+                </a>
+
+                <a href="https://jhshongw08.github.io/juanjosheptshongwparedesallasi/" target="_blank" class="card-compañero">
+                    <div class="barra-lateral"></div>
+                    <span>Página de Juan Jhosept Shongw Paredes Hallasi</span>
+                </a>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 - Creado por Ivan Alipio Perales Marroquin</p>
+    </footer>
 
 </body>
 </html>
